@@ -1,0 +1,4 @@
+{ "_id" : { "$oid" : "5ae0aebc8ab041016c9e08da" }, "roles" : [ "teacher" ], "name" : "Ilponse", "firstname" : "Bruno", "login" : "b.ilponse", "password" : "toto" }
+{ "_id" : { "$oid" : "5ae0aebc8ab041016c9e08db" }, "roles" : [ "student" ], "name" : "Smith", "firstname" : "Will", "login" : "w.smith", "password" : "toto" }
+{ "_id" : { "$oid" : "5ae0aebc8ab041016c9e08dc" }, "roles" : [ "student" ], "name" : "Carla", "firstname" : "Bruni", "login" : "c.bruni", "password" : "toto" }
+{ "_id" : { "$oid" : "5ae0aebc8ab041016c9e08dd" }, "roles" : [ "student" ], "name" : "John", "firstname" : "Woo", "login" : "j.woo", "password" : "toto" }

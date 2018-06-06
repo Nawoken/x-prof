@@ -1,0 +1,74 @@
+<h1>X-PROF</h1>
+<p>A cool app to do nice stuff</p>
+<h3>Welcome {{firstname}} {{name}}!</h3>
+
+<table class="table">
+    <tr>
+        <th><h2>Courses</h2></th>
+        <th><h2>Sessions</h2></th>
+        <th><h2>Students</h2></th>
+        <th><h2>Evaluation</h2></th>
+    </tr>
+
+    <tr>
+        <td>
+            {{#each courses}}
+                <a href="/evaluation.html?course_id={{this._id}}">{{this.name}}</a><br>
+            {{/each}}
+        </td>
+
+        <td>
+            {{#each sessions}}
+                <a href="/evaluation.html?course_id={{../course._id}}&session_id={{this._id}}">{{this.date}}</a><br>
+            {{/each}}
+        </td>
+
+        <td>
+            {{#each students}}
+                <a href="/evaluation.html?course_id={{../course._id}}&session_id={{../session_id}}&student_id={{this._id}}">{{this.firstname}} {{this.name}}</a><br>
+            {{/each}}
+        </td>
+
+        <td>
+
+            <table class="table">
+
+                <tr>
+                    <th><h3>Skill</h3></th>
+                    <th><h3>Not evaluated</h3></th>
+                    <th><h3>1</h3></th>
+                    <th><h3>2</h3></th>
+                    <th><h3>3</h3></th>
+                    <th><h3>4</h3></th>
+                </tr>
+
+            <form action="/evaluation.post" method="post">
+
+                {{#each evaluations}}
+
+                    <tr>
+
+                        <td>
+                            {{this.name}}
+                        </td>
+                        {{#each ../notes}}
+                            <td><input class="form-check-input" type="radio" name="{{../skill}}" value="{{this}}"{{#compare this "==" ../mark}} checked="checked" {{/compare}}></td>
+                        {{/each}}
+                    </tr>
+
+                {{/each}}
+
+                <input type="submit" value="Save">
+
+            </form>
+
+
+
+
+            </table>
+
+        </td>
+
+    </tr>
+
+</table>

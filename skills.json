@@ -1,0 +1,3 @@
+{ "_id" : { "$oid" : "5ae0aebd8ab041016c9e08de" }, "name" : "JAVA ", "description" : "Developpement" }
+{ "_id" : { "$oid" : "5ae0aebd8ab041016c9e08df" }, "name" : "Project management", "description" : "Project management" }
+{ "_id" : { "$oid" : "5ae0aebd8ab041016c9e08e0" }, "name" : "Team building", "description" : "Team building" }
